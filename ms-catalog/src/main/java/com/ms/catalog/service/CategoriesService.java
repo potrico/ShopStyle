@@ -2,6 +2,7 @@ package com.ms.catalog.service;
 
 import com.ms.catalog.dto.CategoriesDTO;
 import com.ms.catalog.dto.CategoriesFormDTO;
+import com.ms.catalog.dto.ProductsDTO;
 import com.ms.catalog.entity.Categories;
 import org.springframework.stereotype.Component;
 
@@ -12,13 +13,13 @@ public interface CategoriesService {
 
     CategoriesDTO save(CategoriesFormDTO body);
 
-    List<Categories> list();
+    List<CategoriesDTO> list();
 
-    CategoriesDTO searchForProducts(String categories_id);
+    List<ProductsDTO> searchForProducts(String id);
 
-    CategoriesDTO search(String categories_id);
+    CategoriesDTO search(String id);
 
-    CategoriesDTO update(String categories_id, CategoriesFormDTO body);
+    CategoriesDTO update(String id, CategoriesFormDTO body);
 
-    void delete(String categories_id);
+    void delete(String id);
 }

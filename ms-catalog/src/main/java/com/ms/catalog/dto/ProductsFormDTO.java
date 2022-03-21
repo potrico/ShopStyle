@@ -1,6 +1,7 @@
 package com.ms.catalog.dto;
 
 import com.ms.catalog.entity.Categories;
+import com.sun.istack.internal.NotNull;
 import lombok.Data;
 
 import java.util.List;
@@ -8,11 +9,15 @@ import java.util.List;
 @Data
 public class ProductsFormDTO {
 
+    @NotNull
     private String name;
 
+    @NotNull
     private String description;
 
-    private boolean active;
+    @NotNull
+    private Boolean active;
 
-    private List<Categories> category_ids;
+    @NotNull
+    private List<String> categories_ids;
 }

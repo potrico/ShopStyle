@@ -9,7 +9,7 @@ public interface VariationService {
 
     VariationsDTO save(VariationsFormDTO body);
 
-    VariationsDTO update(String variation_id, VariationsFormDTO body);
+    VariationsDTO update(String id, VariationsFormDTO body);
 
     void delete(String variation_id);
 

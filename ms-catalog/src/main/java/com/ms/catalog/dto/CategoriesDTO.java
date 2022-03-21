@@ -9,5 +9,5 @@ public class CategoriesDTO {
 
     private String name;
 
-    private boolean active;
+    private Boolean active;
 }

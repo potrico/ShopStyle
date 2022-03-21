@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class VariationsDTO {
 
-    private String variation_id;
+    private String id;
 
     private String color;
 
@@ -16,5 +16,4 @@ public class VariationsDTO {
 
     private int quantity;
 
-    private Products product_id;
 }

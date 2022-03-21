@@ -2,12 +2,15 @@ package com.ms.catalog.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
+@Document(collection = "variations")
 public class Variations {
 
     @Id
-    private String variation_id;
+    private String id;
 
     private String color;
 
@@ -17,5 +20,5 @@ public class Variations {
 
     private int quantity;
 
-    private Products product_id;
+
 }

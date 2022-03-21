@@ -2,22 +2,26 @@ package com.ms.catalog.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@Document
+@Document(collection = "products")
 public class Products {
 
     @Id
-    private String product_id;
+    private String id;
 
     private String name;
 
     private String description;
 
-    private boolean active;
+    private Boolean active;
 
-    private List<Categories> category_ids;
+    @DBRef
+    private List<Variations> variations = new ArrayList<>();
+
 }

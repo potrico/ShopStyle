@@ -1,6 +1,7 @@
 package com.ms.catalog.dto;
 
 import com.ms.catalog.entity.Categories;
+import com.ms.catalog.entity.Variations;
 import lombok.Data;
 
 import java.util.List;
@@ -8,13 +9,13 @@ import java.util.List;
 @Data
 public class ProductsDTO {
 
-    private String product_id;
+    private String id;
 
     private String name;
 
     private String description;
 
-    private boolean active;
+    private Boolean active;
 
-    private List<Categories> category_ids;
+    private List<VariationsDTO> variations;
 }
